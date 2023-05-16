@@ -6,14 +6,10 @@ const prisma = new PrismaClient()
 
 app.get('/users', async () => {
   const users = await prisma.user.findMany()
-
   return users
 })
 
 app
-  .listen({
-    port: 3333,
-  })
-  .then(() => {
-    console.log('🚀 HTTP server running on port http://localhost:3333')
-  })
+  .listen({ port: 3030 })
+  .then(() => console.log('Server listening on port: 3030'))
+  .catch((err) => console.error(err))
