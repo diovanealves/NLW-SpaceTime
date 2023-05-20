@@ -18,7 +18,7 @@ export default function Profile() {
       <p className="max-w-[140px] text-sm leading-snug">
         {name}
         <a
-          href=""
+          href="/api/auth/logout"
           className="flex items-center gap-1 font-bold text-red-500 hover:text-red-400"
         >
           <LogOut size={20} />
